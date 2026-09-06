@@ -1,0 +1,79 @@
+Node.js is a runtime environment that lets you run JavaScript outside the browser — usually on a server.
+
+Normally, JavaScript only runs inside web browsers (like Chrome) to make websites interactive. Node.js takes the same JavaScript language and lets it run directly on your computer or a server, so you can use it to build backend applications — things like APIs, databases connections, file handling, etc.
+
+Key things to know:
+
+Built on Chrome's V8 engine — the same JS engine that powers Chrome, just repackaged to run standalone.
+Non-blocking / asynchronous — Node is really good at handling many requests at once without getting stuck waiting (great for servers).
+npm (Node Package Manager) comes bundled with it — a huge ecosystem of free packages/libraries you can install (like Axios, which you're already using).
+Single language everywhere — you can use JavaScript for both frontend (React, etc.) and backend (Node) instead of learning a totally different language for the server side.
+
+What you use it for in backend dev:
+
+Creating servers (often with a framework like Express.js on top of Node)
+Building REST APIs
+Connecting to databases (MongoDB, PostgreSQL, etc.)
+Handling authentication, file uploads, etc.
+
+
+//Node REPL
+REPL-->
+R-- read 
+E-evaluate
+P--print
+L--loop
+ An interactive shell where you can run JavaScript code line-by-line directly in your terminal — no need to create a .js file. Comes built into Node.js.
+
+How to start it
+bash
+node
+
+This opens the REPL prompt:
+
+>
+The 4 steps it performs (hence the name)
+Read — reads your JS input
+Eval — evaluates/executes it
+Print — prints the result
+Loop — goes back to waiting for more input
+Basic usage
+js
+> 2 + 3
+5
+> let name = "Srushti"
+undefined
+> console.log(name)
+Srushti
+undefined
+> name.toUpperCase()
+'SRUSHTI'
+
+(Note: undefined shows up after statements that don't return a value, like console.log() or a let declaration — normal, not an error.)
+
+Useful REPL commands
+Command	What it does
+.help	shows all REPL commands
+.exit or Ctrl+D	exits the REPL
+Ctrl+C (twice)	force exit
+.clear	resets the current context
+.save filename.js	saves session to a file
+.load filename.js	loads a file into REPL
+_	holds the last evaluated result
+Why it's useful
+Quickly test small snippets of JS/Node code without creating a file
+Explore how built-in objects/methods behave (Math, Array, String, etc.)
+Debug or experiment with Node core modules like fs, http, path
+
+
+we use New-Item "script.js" to create file
+once the file gets created in vscode and u write code in it u can then run to it on terminal using node filename
+process
+process: THis object provides information about,and control over,the current Node.js process
+process.argv:returns an array containing the command line arguments passed when the Node.js process was launched
+
+#module.exports
+requiring files
+require() a built -in-function to include external modules that exist in separate files
+module.exports a special object
+  

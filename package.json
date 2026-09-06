@@ -1,0 +1,26 @@
+{
+  "name": "backened",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/srushtisp09/Backened#readme",
+  "bugs": {
+    "url": "https://github.com/srushtisp09/Backened/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srushtisp09/Backened.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "Math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "figlet": "^1.11.4"
+  },
+  "devDependencies": {},
+  "type": "module"
+}
+
