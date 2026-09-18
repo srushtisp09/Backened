@@ -1,0 +1,192 @@
+// ports: are the logical endpoints of a network connectiion that is used
+// to exchange information between a web server and a web client
+
+//  app.use((req,res)=>{
+//     console.log("request received  ")
+//  }) this method listens to all types of requests
+//sending a response:
+// request(req) response(resp)
+// when a request is sent it gets listened and then gets parsed (the sent request is text based which gets converted to
+//  object this is done by express it makes a object that is javascript understandable )
+// sending response
+// res.send() you can send any type of data 
+//  you can also pass a object in the response
+//Routing:
+// it is a process of slecting a path for traffic in a network or between or across 
+//Nodeman:s a development tool that automatically restarts a Node.js application whenever it detects file changes in your project directory.
+ // app.get("/:username:/id",(req,res)=>{
+    // console.log(req.params);
+    // or u can write this also
+    // let{username,id}=requestAnimationFrame.params;
+    // res.send("hello ,i am root")
+    // })
+    AI Mode conversationYou sent: 1 imageThe error occurs because Windows is case-sensitive when using the cd command in PowerShell for these specific folders, or you are typing the name slightly differently than how it is stored.Looking at your File Explorer on the left, the folder is named Nodejs-and-Express, but you can see that other folders like WEBDEVELOPMENT and WEB-DEVELOPMENT have duplicate names with different casing.Here are the fastest ways to fix this error and get into your folder:Solution 1: Use Tab Autocomplete (Recommended)Instead of typing the whole name, let PowerShell find the exact folder path for you:Type cd NodePress the Tab key on your keyboard. PowerShell will automatically cycle through folders starting with "Node".Once it shows the correct folder, hit Enter.Solution 2: Wrap the Folder Name in QuotesIf a folder name contains special characters or hidden spaces, PowerShell can get confused. Try wrapping the exact name in single quotes:powershellcd 'Nodejs-and-Express'
+Use code with caution.Solution 3: Check your actual directory contentsIf it still says it doesn't exist, see exactly what folders PowerShell detects in your current location by running:powershelldir
+Use code with caution.Look closely at the list that prints out to see exactly how the Nodejs-and-Express folder is spelled and cased, then copy and paste that exact name after cd.If the folder still isn't opening, let me know:What printed out when you typed the dir command?Is this folder stored locally, or is it actively syncing inside a cloud backup like OneDrive?I can help you map the exact path if it got moved!You sent: 1 imageThe Nodejs-and-Express folder is actually located inside your Srushti folder, not directly on your Desktop.Your dir command shows that your Desktop currently only contains three folders: ApnaCollege, Backened, and Srushti. Your VS Code window at the top also shows a breadcrumb path pointing to a different directory structure.To navigate into your project and run your code, run these commands in your PowerShell window one by one:1. Move into the Srushti folderpowershellcd Srushti
+Use code with caution.2. Move into your project folderpowershellcd Nodejs-and-Express
+Use code with caution.(Note: If the folder is named slightly differently inside there, type cd Node and press the Tab key to autocomplete it).3. Run your scriptOnce you are inside the correct folder, you can run your server file using:powershellnode index.js
+Use code with caution.Once you get into the folder, let me know if you run into any MODULE_NOT_FOUND errors when booting up the server. I can help you install Express correctly if needed!d-----        06-09-2026     22:43                Backened
+d-----        22-08-2026     17:03                Srushti
+-a----        06-09-2026     18:13              0 script.js
+-a----        06-09-2026     18:16              0 script1.js
+
+
+PS C:\Users\Hp\Desktop> cd Srushti
+PS C:\Users\Hp\Desktop\Srushti> cd Nodejs-and-Express
+cd : Cannot find path 'C:\Users\Hp\Desktop\Srushti\Nodejs-and-Express' because it does not exist.
+At line:1 char:1
++ cd Nodejs-and-Express
++ ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\Hp\Des...ejs-and-Express:String) [Set-Locati
+   on], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommandThe folder Nodejs-and-Express is likely inside your Backened directory instead of Srushti, or it is located directly inside your OneDrive syncing folder.Let's find exactly where it went by searching your system or checking the actual contents of those folders.Option 1: Check the Backened folderSince your first screenshot showed that your project files are related to backend development, it is highly likely inside that folder. Run these commands:powershellcd ..
+cd Backened
+dir
+Use code with caution.Look at the list to see if Nodejs-and-Express appears there. If it does, type cd Nodejs-and-Express.Option 2: Find the exact path from VS Code (Quickest)Since you already have the project open in VS Code (visible in your previous screenshot), you can get the exact path instantly:Go to your VS Code window.Right-click on the index.js file tab at the top, or right-click the Nodejs-and-Express folder name in the left sidebar explorer.Select Copy Path (or Copy Absolute Path).Paste that path here in our chat, or type cd  in PowerShell and paste it there to jump directly to it.Option 3: Let PowerShell search your Desktop automaticallyIf you want PowerShell to find it for you, run this command to search all subfolders on your Desktop:powershellGet-ChildItem -Directory -Recurse -Filter "Nodejs-and-Express"
+Use code with caution.This will print out the exact path where the folder is hiding.Tell me:What printed out when you ran the Get-ChildItem search command?Or, what was the exact path you copied out of VS Code?Once we have the path, we can get your server running immediately.You sent: 1 imageThe folder Nodejs-and-Express doesn't actually exist as a physical folder inside Backened—instead, your Backened folder is the project folder itself, and VS Code is just displaying its name differently.If you look closely at your VS Code sidebar at the top right, it shows Nodejs-and-Express right next to a curved arrow pointing to Backened. This means you opened the Backened folder in VS Code, but you renamed the workspace display name, or the folder is linked to a repository with that name.You are already in the exact location where your files live (C:\Users\Hp\Desktop\Backened).Since you are already in the correct folder, you don't need to cd anywhere else. You can run your code right now by trying these steps:1. View your project files in PowerShellRun dir to verify. You will see your backend files right there:powershelldir
+Use code with caution.2. Run your server scriptIn your VS Code window, you have a file open called index.js. However, looking at your file list in PowerShell, it shows Math.js and script1.js, but it doesn't show index.js.Check if you have an Express subfolder. If index.js is inside an Express folder (as hinted by the VS Code sidebar), run:powershellcd Express
+node index.js
+Use code with caution.If it says the file isn't there, check your dir output again or run your script with:powershellnode script1.js
+Use code with caution.Let me know:What error message (if any) do you get when you run node index.js or node script1.js?Can you expand the Express folder in your VS Code sidebar so we can see exactly where index.js is saved?now what should i doYou need to move into your Express folder first, because that is where your index.js file is actually located.If you look at your VS Code sidebar at the top right, index.js is nested inside a folder named Express (which is inside Backened).Run these commands one by one in your PowerShell window to get into the folder and start your server:1. Move into the Express folderpowershellcd Express
+Use code with caution.2. Verify your file is thereRun this command to make sure you see index.js in the list:powershelldir
+Use code with caution.3. Run your Node.js serverOnce you see index.js, start your application by running:powershellnode index.js
+Use code with caution.Let me know what happens when you run that final command! If it successfully starts, it will likely output your console.dir(app) log or hang open cleanly.If it crashes with a MODULE_NOT_FOUND error, tell me:What is the exact text of the error?Did you already run npm install express inside this specific folder?i deleted the folder tell clean from firstLet's start completely fresh and build your Express project from scratch. Since you deleted the old folders, we will create a clean new workspace directly on your Desktop.Follow these steps one by one in your Windows PowerShell window:Step 1: Go to your Desktop and create a brand new folderRun these commands to make a clean project folder and move into it:powershellcd ~\Desktop
+mkdir node-express-project
+cd node-express-project
+Use code with caution.Step 2: Initialize your Node.js projectCreate a brand new configuration file (package.json) by running:powershellnpm init -y
+Use code with caution.Step 3: Install ExpressInstall a fresh copy of the Express framework into this new folder:powershellnpm install express
+Use code with caution.Step 4: Open your clean project in VS CodeLaunch VS Code directly inside this new folder so your workspace is set up perfectly:powershellcode .
+Use code with caution.Step 5: Create your code fileLook at your VS Code sidebar on the left.Click the New File icon (the small document icon with a plus sign) and name the file index.js.Paste this simple test code into your new index.js file and save it (Ctrl + S):javascriptconst express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+    res.send("Hello World! Server is running smoothly.");
+});
+
+app.listen(port, () => {
+    console.log(`Server successfully listening on port ${port}`);
+});
+Use code with caution.Step 6: Start your new serverGo back to your PowerShell window (or open the terminal inside VS Code using Ctrl + ~) and run:powershellnode index.js
+Use code with caution.Once you run that last command, tell me:Do you see the message "Server successfully listening on port 3000"?Or did any new error text pop up in the terminal?You sent: 1 imageYour setup looks perfect now, but your server didn't run because you haven't saved your changes in VS Code yet.If you look closely at the index.js file tab at the top right of your VS Code window, there is a white dot next to the file name. That dot means the file has unsaved changes, so PowerShell is executing an empty file.Follow these quick steps to fix it:1. Save your file in VS CodeClick anywhere inside your VS Code text editor where your code is written and press:Ctrl + S (on Windows) to save the file. The white dot will turn into an X.2. Update your code (Optional but recommended)Right now, your code contains console.dir(app);. This will dump a massive wall of technical text into your terminal. To make a functional web server instead, replace the text in your index.js file with this clean template before saving:javascriptconst express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+    res.send("Server is running smoothly!");
+});
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
+Use code with caution.3. Run the script againGo back to your PowerShell window and run:powershellnode index.js
+Use code with caution.Once you hit enter, let me know:Did you get a blank line / hanging terminal, or did a specific console log message print out?If you used the updated template, try opening your web browser and going to localhost:3000—does it load successfully?hanging terminalA hanging terminal is exactly what you want—it means your Node.js server is successfully running and listening for requests!Unlike normal commands that finish and give you back your command prompt (PS C:\>), a backend web server must stay active indefinitely to handle incoming traffic.You can verify it is working right now by following these steps:1. Test it in your browserOpen a new tab in your web browser (like Chrome or Edge).Type http://localhost:3000 into the address bar at the top and hit Enter.You should see a webpage load with your response (like a blank page with Server is running smoothly! or a message about your app directory, depending on which code you saved).2. How to stop or restart the serverWhenever you make changes to your code in index.js, you have to stop and restart the server for those changes to take effect:To Stop: Click inside your hanging PowerShell terminal and press Ctrl + C on your keyboard. This will kill the server and give you back your standard command line prompt.To Restart: Run node index.js again.Let me know:Did localhost:3000 load successfully in your browser?Are you planning to connect a frontend HTML/CSS page to this server next, or do you want to build some custom API routes?what is local hostlocalhost is a special domain name that means "this computer." It allows your computer to talk to itself.When you are developing a web application, you don't want to publish your unfinished code to the live internet for the whole world to see. Instead, you host it locally on your own machine.Here is a simple breakdown of how it works:1. The Virtual LoopEvery computer connected to a network has a private IP address used strictly for self-communication: 127.0.0.1. Because numbers are hard to remember, your operating system creates a text shortcut called localhost. Typing http://localhost into your browser is the exact same thing as typing http://127.0.0.1.2. What is the Port Number (:3000)?Your computer runs hundreds of tasks at the same time (browser, Discord, Spotify, VS Code). Ports act like specific apartment numbers inside a massive building so data knows exactly where to go:The Building: localhost (Your computer)The Apartment: 3000 (Your Node.js/Express application)By going to localhost:3000, you are telling your web browser: "Look inside my own computer, and find the specific application running on channel 3000."3. Who can see it?You: Yes.Anyone else on the internet: No. If a friend tries to type localhost:3000 on their laptop, their browser will look inside their own laptop, not yours.Would you like to see how to change the port number in your code, or do you want to learn how to open up your local server so you can test it on your mobile phone using your Wi-Fi network?You sent: 1 image and said: here i should get something in terminal nohere i should get something in terminal noNo, you shouldn't get anything else in the terminal right now—this is perfectly correct and means your server is working exactly as intended!Looking at your screen, everything is set up flawlessly:In VS Code, you updated your code to use const port = 8080; and saved it.In PowerShell, you ran node index.js, and it printed "Server is listening on port 8080".In your Web Browser on the left, you visited the page, and your server successfully responded by printing "server is running smoothly" on the screen.Why is the terminal quiet?The terminal only displays what you explicitly tell it to print using console.log().Right now, your code sets up a connection listener, tells you it started successfully, and then quietly sits there in the background waiting for you to open webpages. It won't print anything else automatically when you visit the page unless you add code to log it.How to make the terminal print something when you open the pageIf you want to see proof in your terminal every single time you open or refresh your browser tab, you can add a console.log inside your route function.Stop your server by clicking in PowerShell and pressing Ctrl + C.Update your code in VS Code to look like this (notice line 7):javascriptconst express = require("express");
+const app = express();
+
+const port = 8080;
+
+app.get("/", (req, res) => {
+    console.log("Someone just visited the homepage!"); // <-- Add this line
+    res.send("server is running smoothly");
+});
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
+Use code with caution.Save the file (Ctrl + S).Restart the server in PowerShell (node index.js).Now, try refreshing your web browser page. You will see "Someone just visited the homepage!" instantly pop up in your terminal!Would you like to learn how to create a second webpage route (like localhost:8080/about) so you can click between different pages?y m i not using app.useYou aren't using app.use() yet because you are only handling a single, direct web page route, whereas app.use() is designed for broader, global tasks called middleware.Right now, you are using app.get(), which tells Express: "Only run this block of code if the user clicks a specific link or uses a specific URL method."Here is the difference between the two functions and when you will start using them:1. app.get() is for Specific Web PagesYou use app.get() when you want to build a destination page. It only triggers on a perfect match:app.get("/", ...) target matches only the homepage.app.get("/contact", ...) target matches only the contact page.2. app.use() is for Global "Middleware"You use app.use() when you want a piece of code to run for every single request, no matter what page the user is trying to visit. It doesn't care about the specific route or method.Think of it like a security guard standing at the front door of your server building before visitors are allowed to walk down the hallway to their specific room (app.get).Direct ComparisonFeatureapp.get()app.use()PurposeHandles a specific webpage route.Runs global code for all incoming requests.MatchingStrict match (e.g., must be exactly /about).Broad match (prefixes everything after it).Typical Use CasesSending an HTML file, loading a profile page.Serving images/CSS, reading JSON forms, logging data.When will you need app.use()? (Examples)As your application grows, you will add app.use() lines above your routes for tasks like these:Serving static assets (CSS, Images, JavaScript):If you have an index.html file that needs to load a style.css stylesheet, you tell Express to make your assets folder accessible globally:javascriptapp.use(express.static("public"));
+Use code with caution.Reading Form Data:If a user submits a login form or a JSON object, Express cannot read it out-of-the-box. You have to tell Express to parse incoming bodies globally:javascriptapp.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+Use code with caution.Would you like to try adding an app.use() statement to build a logger that prints out the URL of every page a user visits, or would you prefer to try serving a real HTML stylesheet file to your browser next?You sent: 1 imageThe "Cannot GET /orange" error is happening because your file has unsaved changes, and your server hasn't been restarted to load the new code.Looking at your image, there are two distinct indicators for this:In VS Code, there is a white dot on the index.js tab at the top right. This means your new /orange route code is written but hasn't been saved to your computer yet.Because it wasn't saved, the running backend server does not know the /orange page exists yet.Fix it quickly by following these three steps in order:1. Save your code in VS CodeClick inside your VS Code window and press:Ctrl + S (The white dot on the tab will turn back into an X).2. Restart your Node serverGo down to your PowerShell window and do the following:Press Ctrl + C to stop the current running server.Type node index.js and hit Enter to start it back up with the newly saved code.3. Refresh your browserGo back to your browser tab at localhost:8080/orange and hit Refresh (F5). It will now successfully load your custom message!Let me know if the "server is yoorunning smooth" text successfully prints out after refreshing! Once that works, do you want to learn how to pass custom route variables (like localhost:8080/user/srushti) so your server can dynamically read parameters from the URL?You sent: 1 tab and said: Hp\Desktop\node-express-project> node index.jsServer is listening on port 3000PS C:\Users\Hp\Desktop\node-express-project> node index.jsServer is listening on port 8080PS C:\Users\Hp\Desktop\node-express-project> node index.jsServer is listening on port 8080PS C:\Users\Hp\Desktop\node-express-project> node index.jsC:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108 throw new PathError(`Missing parameter name at index ${index}`, str); ^PathError [TypeError]: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info at consumeUntil (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108:27) at parse (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:140:26) at process (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:263:56) at pathToRegexp (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:274:5) at Object.match (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:225:30) at matcher (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:86:23) at new Layer (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:93:62) at router.route (C:\Users\Hp\Desktop\node-express-project\node_modules\router\index.js:428:17) at app.route (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:257:22) at app.<computed> [as get] (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:478:22) { originalPath: '*'}Node.js v24.13.1PS C:\Users\Hp\Desktop\node-express-project>GitHub - pillarjs/path-to-regexp: Turn a path string such as `/user/:name` into a regular expression · GitHubHp\Desktop\node-express-project> node index.jsServer is listening on port 3000PS C:\Users\Hp\Desktop\node-express-project> node index.jsServer is listening on port 8080PS C:\Users\Hp\Desktop\node-express-project> node index.jsServer is listening on port 8080PS C:\Users\Hp\Desktop\node-express-project> node index.jsC:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108 throw new PathError(`Missing parameter name at index ${index}`, str); ^PathError [TypeError]: Missing parameter name at index 1: *; visit https://git.new/pathToRegexpError for info at consumeUntil (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108:27) at parse (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:140:26) at process (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:263:56) at pathToRegexp (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:274:5) at Object.match (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:225:30) at matcher (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:86:23) at new Layer (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:93:62) at router.route (C:\Users\Hp\Desktop\node-express-project\node_modules\router\index.js:428:17) at app.route (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:257:22) at app.<computed> [as get] (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:478:22) { originalPath: '*'}Node.js v24.13.1PS C:\Users\Hp\Desktop\node-express-project>The crash happens because you used a standalone asterisk ("*") as a wildcard route in your code.In newer versions of the Express routing library (path-to-regexp), using a lone * is no longer valid and throws a Missing parameter name error. Every wildcard route must now have an explicit variable name attached to it.Here is how to fix your code so it runs successfully:The Fix: Give your wildcard a nameLook inside your index.js file for wherever you wrote a catch-all route (like app.get("*", ...) or app.use("*", ...)).Change the "*" to "/*" or "/:anything" to name the path parameter:javascript// ❌ WRONG (Causes your crash):
+app.get("*", (req, res) => { ... });
+
+//  CORRECT (Give the wildcard a variable name):
+app.get("/*", (req, res) => {
+    res.status(404).send("Page not found!");
+});
+Use code with caution.Apply and RestartMake that change in your VS Code window.Save the file (Ctrl + S).Run node index.js in your PowerShell terminal.If you are still experiencing the crash, paste your full index.js code lines here so I can show you exactly which line to edit!)
+    at parse (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:140:26)
+    at process (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:263:56)
+    at pathToRegexp (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:274:5)
+    at Object.match (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:225:30)
+    at matcher (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:86:23)
+    at new Layer (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:93:62)
+    at router.route (C:\Users\Hp\Desktop\node-express-project\node_modules\router\index.js:428:17)
+    at app.route (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:257:22)
+    at app.<computed> [as get] (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:478:22) {
+  originalPath: '/*'
+}
+
+Node.js v24.13.1
+PS C:\Users\Hp\Desktop\node-express-project>It looks like there's no response available for this search. Try asking something else.You sent: 1 tab and said: p\node-express-project\node_modules\path-to-regexp\dist\index.js:108 throw new PathError(`Missing parameter name at index ${index}`, str); ^PathError [TypeError]: Missing parameter name at index 2: /*; visit https://git.new/pathToRegexpError for info at consumeUntil (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108:27) at parse (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:140:26) at process (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:263:56) at pathToRegexp (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:274:5) at Object.match (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:225:30) at matcher (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:86:23) at new Layer (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:93:62) at router.route (C:\Users\Hp\Desktop\node-express-project\node_modules\router\index.js:428:17) at app.route (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:257:22) at app.<computed> [as get] (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:478:22) { originalPath: '/*'GitHub - pillarjs/path-to-regexp: Turn a path string such as `/user/:name` into a regular expression · GitHubp\node-express-project\node_modules\path-to-regexp\dist\index.js:108 throw new PathError(`Missing parameter name at index ${index}`, str); ^PathError [TypeError]: Missing parameter name at index 2: /*; visit https://git.new/pathToRegexpError for info at consumeUntil (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:108:27) at parse (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:140:26) at process (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:263:56) at pathToRegexp (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:274:5) at Object.match (C:\Users\Hp\Desktop\node-express-project\node_modules\path-to-regexp\dist\index.js:225:30) at matcher (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:86:23) at new Layer (C:\Users\Hp\Desktop\node-express-project\node_modules\router\lib\layer.js:93:62) at router.route (C:\Users\Hp\Desktop\node-express-project\node_modules\router\index.js:428:17) at app.route (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:257:22) at app.<computed> [as get] (C:\Users\Hp\Desktop\node-express-project\node_modules\express\lib\application.js:478:22) { originalPath: '/*'The error is still happening because /* is missing a parameter name right after the asterisk.In modern versions of Express and its routing library (path-to-regexp), you cannot use an asterisk by itself. It expects a variable name attached directly to the asterisk so it knows what to call the matched text.Here is how you fix it:The Fix: Add a name after the asteriskOpen your index.js file and change /* to /*splat or /*path:javascript// ❌ WRONG (Still causes a crash because there is no name after *):
+app.get("/*", (req, res) => { ... });
+
+//  CORRECT (Give the asterisk a name like "splat" or "path"):
+app.get("/*splat", (req, res) => {
+    res.status(404).send("Page not found!");
+});
+Use code with caution.Apply and RestartSave the file in VS Code (Ctrl + S).Run the server again in PowerShell:powershellnode index.js
+Use code with caution.Let me know if the server boots up successfully now! If it still errors, please copy and paste your full index.js code here so I can see every line and fix it perfectly for you.git.newGitHub - pillarjs/path-to-regexp: Turn a path string such as `/user/:name` into a regular expression · GitHubThe wildcard * must have a name and matches the behavior of parameters : .git.newGitHub - pillarjs/path-to-regexp: Turn a path string such as `/user/:name` into a regular expression · GitHubThey are defined the same way as regular parameters, but are prefixed with an asterisk ( *foo ).but in tutorial only iwith * they gotYou are completely right to be confused! The tutorial instructor is likely using an older version of Express (Express v4), while you are using the brand-new Express v5.Express recently released a major update (Express v5). One of the biggest breaking changes is that unnamed wildcards like * or /* are no longer allowed because they upgraded their internal URL parser library.In the tutorial (Express 4): A simple * worked perfectly to catch all routes.On your computer (Express 5): It treats * strictly as a placeholder variable that must have a text name attached to it, or it will instantly crash your app.How to write it so it works on your versionTo get the exact same behavior as the tutorial without degrading your app, use this modern syntax:javascript// Change this:
+app.get("/*", (req, res) => { ... })
+
+// To this:
+app.get("/*splat", (req, res) => {
+    res.send("This is a wildcard match!");
+});
+Use code with caution.By adding the word splat (or any word you want) right after the asterisk, you give the wildcard a name, making Express 5 happy.Give that a quick edit in VS Code, save it, and try running node index.js again!Did adding the name to the wildcard fix the crash? Once your server boots back up cleanly, let me know if you want to test how to read the req.params object to see what the user typed in place of that wildcard!GitHubRestore Support for app.all('*') Wildcard in Express v5 #671117 Aug 2025 — Description. ... ❗ Description: In Express v5. 1.0, routes using app. all('*') (or similar wildcard syntax) fail with: Error 👹: t...LinkedInHow to fix Express 5.x wildcard route issue - LinkedIn10 May 2025 — Software Engineer @Texinnova | Researcher | MERN | Java | Next.js | FastAPI | Go 1y 🚨 Encountered a Pitfall with Express 5.x Duri...DEV CommunityExpress v5 Error: “Missing parameter name at position 1”20 Jul 2025 — Turns out, Express v5 introduced a breaking change to how route paths are matched using path-to-regexp. The Problem In Express v5,Show allfine then but y m i getting cannot get for other routesIf you are getting a "Cannot GET" error for your specific routes (like /orange), it means your wildcard catch-all route is placed above your other routes instead of at the very bottom.In Express, route ordering matters completely. Express reads your index.js file from top to bottom like a checklist. The first route pattern that matches the incoming URL takes over and skips everything underneath it.If you put a wildcard route like app.get("/*splat") or app.get("/:something") at the top of your code, it acts like a giant net—it catches everything (including /orange), triggers its own response, and stops Express from ever reaching the lower lines.How to arrange your routes correctlyTo fix this, make sure your routes are stacked from most specific to most generic (wildcards last):javascriptconst express = require("express");
+const app = express();
+const port = 8080;
+
+// 1. Specific paths go FIRST ✅
+app.get("/", (req, res) => {
+    res.send("Server is running smoothly");
+});
+
+app.get("/orange", (req, res) => {
+    res.send("server is yoorunning smooth");
+});
+
+// 2. Wildcard catch-all goes at the very BOTTOM ✅
+app.get("/*splat", (req, res) => {
+    res.status(404).send("Sorry, that page does not exist!");
+});
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
+Use code with caution.Try these steps to verify:Rearrange your code in VS Code so your specific pages come first, and the wildcard is at the bottom.Save your file (Ctrl + S).Restart your server in PowerShell (Ctrl + C to stop, then node index.js).Refresh your browser at localhost:8080/orange.Did shifting the wildcard route to the bottom make your /orange page load successfully? If it still gives you an error, paste your full index.js code block right here so I can organize it correctly for you!Express.jsRouting · Express.js 5.xWildcards. Wildcards match any path after a prefix. Like other route parameters they must have a name, but they are captured as an...MediumExpress.js Routing Update: Say Goodbye to app.get("*")18 Apr 2025 — Shubham 2 min read Apr 18, 2025 1 If you've been working with Express.js for a while, you're probably familiar with the old wildca...You sent: 1 imageYou are getting "Cannot GET /music" because your server is still running your old code in the background and hasn't been restarted to load your new /*all route.If your new code was active, you would see bruhh on the screen instead of "Cannot GET /music".Follow these steps to force the server to update:1. Stop and Restart your terminal serverGo down to your PowerShell terminal window and press:Ctrl + C to kill the old server process.Type node index.js and hit Enter to start it freshly.2. Refresh the browserGo back to your browser tab at localhost:8080/music and press Refresh (F5). It will now successfully display bruhh!Did restarting the server make the "bruhh" message show up for /music? Once that works, would you like to learn how to automatically restart your server every time you save using a tool called nodemon so you don't have to keep typing Ctrl + C?now teach app.postapp.post() is used when you want to send data to the server to create or update something, like submitting a form or logging in.While app.get() is for requesting a web page to look at, app.post() is for submitting data to be processed. You cannot visit a POST route directly by typing it into your browser's address bar—it has to be triggered by an HTML form or a frontend network request.Let's build a working POST route together.Step 1: Install the required parser middlewareBy default, Express cannot read form text or JSON out of the box. We need to add an app.use() statement to allow Express to read incoming data.Update your code in VS Code to look exactly like this:javascriptconst express = require("express");
+const app = express();
+const port = 8080;
+
+// Middleware to parse form data (Mandatory for app.post)
+app.use(express.urlencoded({ extended: true }));
+
+// 1. GET Route: Shows the submission form
+app.get("/register", (req, res) => {
+    res.send(`
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Enter username" required />
+            <button type="submit">Submit Data</button>
+        </form>
+    `);
+});
+
+// 2. POST Route: Receives the submitted data
+app.post("/register", (req, res) => {
+    const newUsername = req.body.username; // Reads the input field value
+    res.send(`Successfully registered user: ${newUsername}`);
+});
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
+});
+ differnce between get and post is get is used to request data from the server while post is used to send data to a server to create or update a resource
+
+//  Query String app.get("/search",(req,res)=>{
+    console.log(req:query);
+    //u can also write it as
+    //let {q}=req:query;
+    //if(!q){
+    res.send(<h1> )}
+    res.send("no results");
+    });
+    // this is the additional info sent 
