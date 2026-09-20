@@ -1,0 +1,39 @@
+Starting with Backend part3 Node:EJS(it is a tool which is in JS)
+Templating:(layout)EJS(Embedded Javascript templates)
+EJS is a simple templating language that lets you generate HTML markup with plain Javascript
+To use Ejs
+do the usual process of getting into the terminal and
+command:1.npm init -y
+        2.npm i express
+        also download npm i ejs
+        3.New-Item "index.js" ---> to create the file
+        4.nodemon index.js    ---> to run the file
+and then add thses to your package
+app.set("viwe engine","ejs");
+app.get("/",(req,res)=>{
+    res.render("home.ejs");
+});
+y do we use res.render() its because one cannot send large files in res.send so we use res.render so that we can send 
+files like index.html css and js etc
+when u start templating always use this in ur index.Ejs
+const path=require("path")
+app.set("views",path.join(__dirname, "/views"))---> over dirname write ur dir name
+this helps the file run on the local host irrespective of ur directory
+Interpolation Syntax:
+    Interpolation refers to embedding expression into marked up text.
+ Interpolation makes our EJS html dynamic in nature we use tags of ejs like <%= %> this gives the output in html string 
+
+ Passing the data to EJS: you can pass data to ejs and use it
+  
+Conditional Statement in Ejs:
+Adding conditional inside EJS   : <% if(diceVal == 6){
+    %> <h2> Nice! Roll dice again.</h2> 
+
+<%} %>
+<% we use scriplet tag which is for control flow
+we learnt about conditional statements and also about serving static files static files include files like style.css and app.js for this we make a folder called public and add these files there and then use
+it in the index.js
+we learnt about includes which is basically used to include subtemplates in our templates
+difference between get and post
+concept of oops
+classes and inheritance  
