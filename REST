@@ -1,0 +1,16 @@
+REST:
+representational State Transfer
+RESt is an architecture style that defines a set of constraints to be used for creating web services.
+Rest is just rules not a techonology 
+RESTFUL APIs : A RESTful API (Representational State Transfer) is an architectural style that allows different computer systems to exchange data securely and predictably over the internet. It acts as a standardized translator, enabling applications like a mobile app, a website, and a backend server to talk to each other using the existing rules of HTTP
+CRUD operations
+C-create
+R- Read
+U-update
+D-delete
+
+Get: Retrieves resources
+Post: submits new data to the server
+Put: updates existing data
+Patch: update existing data partially
+delete:removes data
